@@ -7,10 +7,10 @@ class CrudeLineItem:
         self.amount = amount
         self.amount_decimal = self._fraction_to_decimal()
         self.unit = self._extract_unit()
-        self.ingredient = self._extract_ingredient()
+        self.ingredient = ""
 
     def __repr__(self):
-        return f"amount='{self.amount_decimal}', unit='{self.unit}', ingredient='{self.ingredient}' text='{self.text}'"
+        return f"{self.amount_decimal} {self.unit} of {self.ingredient}     text='{self.text}'"
 
     def _fraction_to_decimal(self):
         if not self.amount:
@@ -106,6 +106,21 @@ def parsing_line(line):
                 numbers.append(string)
 
             else:
-                words.append(string)
-                line_items.append(CrudeLineItem(text=" ".join(words),amount=" ".join(numbers)))
+                numbers.append(string)
+        else:
+            if string.strip():
+                words.append(string.strip(' '))
+    line_items.append(CrudeLineItem(text=" ".join(words),amount=" ".join(numbers)))
+
+    texts_joined = ""
+    for item in line_items:
+        texts_joined += " " + item.text
+    for item in line_items:
+        item.text = texts_joined.strip()
+        item.ingredient = item._extract_ingredient()
+
+    line_items = [item for item in line_items if item.amount or item.unit or item.ingredient]
+
     return line_items
+
+
