@@ -10,7 +10,7 @@ class CrudeLineItem:
         self.ingredient = ""
 
     def __repr__(self):
-        return f"{self.amount_decimal} {self.unit} of {self.ingredient}     text='{self.text}'"
+        return f"{self.amount_decimal:.2f} {self.unit:<15} of {self.ingredient:<20} '{self.text}'"
 
     def _fraction_to_decimal(self):
         if not self.amount:
@@ -77,11 +77,16 @@ for key, variants in INGREDIENTS.items():
         VARIANT_TO_KEY[variant] = key
 
 
+def printing_recipe(text_block):
+    items = parsing_pasted_recipes(text_block)
+    print ("\n\n ---RECIPE IN GRAMS--- \n")
+    for i, item in enumerate(items):
+        print(f"{i+1}. {item}")
+    return items
 
 def parsing_pasted_recipes(unparsed_recipe):
 
-    with open(unparsed_recipe, 'r') as file:
-        lines = file.read().splitlines()
+    lines = unparsed_recipe.splitlines()
 
     all_items = []
 

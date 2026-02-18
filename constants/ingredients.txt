@@ -53,3 +53,6 @@ YOGURT_PLAIN=plain yogurt, natural yogurt, yogurt
 MAYONNAISE=mayonnaise, mayo
 PEANUT_BUTTER=peanut butter
 JAM=jam, preserves
+
+VANILLA_EXTRACT=vanilla extract
+SALT=salt, table salt

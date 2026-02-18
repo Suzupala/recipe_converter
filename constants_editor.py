@@ -1,21 +1,18 @@
-from recipe_parser import CrudeLineItem
-
+from recipe_parser import CrudeLineItem, printing_recipe
 
 
 def add_ingredient_to_ingredients(ingredients_list,item):
-    new_line = ""
-    print (f"current amount:         {item.amount}")
-    print (f"current amount decimal: {item.amount_decimal}")
-    print (f"current unit:           {item.unit}")
-    print (f"current ingredient:     {item.ingredient}")
-    print (f"current text:           {item.text}")
-    print (" ")
+    
+    print (f"\n\nediting ingredient list to correctly identify {item.ingredient} {item.text}:\n")
+    
     standardized_ingredient = input("input standardized unit in the form of 'NEW_INGREDIENT':").upper().strip("'").strip()
     common_spellings = input("common spellings found in recipes in the form of 'spellingone, spellintwo'").lower().strip("'").strip()
     with open(ingredients_list, 'a') as file:
         file.write(f"\n{standardized_ingredient}={common_spellings}")
     item.ingredient = item._extract_unit()
-
+    print(f"added '{standardized_ingredient}={common_spellings}' to ingredients.txt")
+    print("Updated list:")
+    
 
 def add_variant_to_ingredient(ingredients_list,item):
 
