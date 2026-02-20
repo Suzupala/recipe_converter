@@ -56,3 +56,6 @@ JAM=jam, preserves
 
 VANILLA_EXTRACT=vanilla extract
 SALT=salt, table salt
+APPLE_CIDER_VINEGAR=apple cider vinegar
+GROUND_FLAX_SEED=ground flax seed, flax seed ground, ground flax seeds, flax seeds ground
+COCONUT_OIL=coconut oil

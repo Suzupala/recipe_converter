@@ -1,7 +1,15 @@
 import sys
+
 from converter import volume_to_grams
 from recipe_parser import CrudeLineItem, printing_recipe
 from constants_editor import add_ingredient_to_ingredients, add_density_to_density_constants
+
+
+#def display_recipe(items):
+    #table = Table(show_header=False, show_lines= False, box=None)
+    #table.add_column
+
+
 
 def main():
 
@@ -24,9 +32,9 @@ def main():
             elif choice != 0:
                 request = input("input d for density-edit or i for ingredient-edit:")
                 if request == "i":
-                    add_ingredient_to_ingredients("constants/ingredients.txt",items[choice-1])
+                    add_ingredient_to_ingredients("constants/ingredients.txt",items,choice-1)
                 elif request == "d":
-                    add_density_to_density_constants("constants/density_constants.txt",items[choice-1])
+                    add_density_to_density_constants("constants/density_constants.txt",items,choice-1)
                 else:
                     print("invalid input for edit request")
             else:
