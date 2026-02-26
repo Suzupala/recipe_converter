@@ -1,4 +1,4 @@
-from recipe_parser import CrudeLineItem, printing_recipe
+from recipe_parser import CrudeLineItem, printing_recipe, load_ingredients
 
 
 def add_ingredient_to_ingredients(ingredients_list,items,index):
@@ -9,7 +9,9 @@ def add_ingredient_to_ingredients(ingredients_list,items,index):
     common_spellings = input("common spellings found in recipes in the form of 'spellingone, spellintwo'").lower().strip("'").strip()
     with open(ingredients_list, 'a') as file:
         file.write(f"\n{standardized_ingredient}={common_spellings}")
-    items[index].ingredient = item._extract_ingredient()
+    
+    load_ingredients()
+    items[index].ingredient = items[index]._extract_ingredient()
     print(f"added '{standardized_ingredient}={common_spellings}' to ingredients.txt")
     print("Updated redipe:")
     printing_recipe(items)

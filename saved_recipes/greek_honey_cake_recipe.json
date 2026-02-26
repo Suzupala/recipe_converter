@@ -1,0 +1,109 @@
+{
+  "name": "greek_honey_cake_recipe",
+  "ingredients": [
+    {
+      "text": "honey",
+      "amount": "1",
+      "amount_decimal": 1.0,
+      "unit": "CUP",
+      "ingredient": "HONEY",
+      "weight": 340.79999999999995
+    },
+    {
+      "text": "white sugar, divided",
+      "amount": "1 \u00be",
+      "amount_decimal": 1.75,
+      "unit": "CUP",
+      "ingredient": "GRANULATED_SUGAR",
+      "weight": 357.0
+    },
+    {
+      "text": "water",
+      "amount": "\u00be",
+      "amount_decimal": 0.75,
+      "unit": "CUP",
+      "ingredient": "WATER",
+      "weight": 180.0
+    },
+    {
+      "text": "lemon juice",
+      "amount": "1",
+      "amount_decimal": 1.0,
+      "unit": "TEASPOON",
+      "ingredient": "LEMON_JUICE",
+      "weight": "Density N/A"
+    },
+    {
+      "text": "all-purpose flour",
+      "amount": "1",
+      "amount_decimal": 1.0,
+      "unit": "CUP",
+      "ingredient": "ALL_PURPOSE_FLOUR",
+      "weight": 127.2
+    },
+    {
+      "text": "baking powder",
+      "amount": "1 \u00bd",
+      "amount_decimal": 1.5,
+      "unit": "TEASPOON",
+      "ingredient": "BAKING_POWDER",
+      "weight": 6.75
+    },
+    {
+      "text": "grated orange zest",
+      "amount": "1",
+      "amount_decimal": 1.0,
+      "unit": "TEASPOON",
+      "ingredient": "ORANGE_ZEST_GRATED",
+      "weight": "Density N/A"
+    },
+    {
+      "text": "ground cinnamon",
+      "amount": "\u00bd",
+      "amount_decimal": 0.5,
+      "unit": "TEASPOON",
+      "ingredient": "CINNAMON_GROUND",
+      "weight": 1.3250000000000002
+    },
+    {
+      "text": "salt",
+      "amount": "\u00bc",
+      "amount_decimal": 0.25,
+      "unit": "TEASPOON",
+      "ingredient": "SALT",
+      "weight": "Density N/A"
+    },
+    {
+      "text": "unsalted butter",
+      "amount": "\u00be",
+      "amount_decimal": 0.75,
+      "unit": "CUP",
+      "ingredient": "BUTTER_UNSALTED",
+      "weight": "Density N/A"
+    },
+    {
+      "text": "eggs",
+      "amount": "3",
+      "amount_decimal": 3.0,
+      "unit": "",
+      "ingredient": "EGG_LARGE",
+      "weight": "No unit"
+    },
+    {
+      "text": "milk",
+      "amount": "\u00bc",
+      "amount_decimal": 0.25,
+      "unit": "CUP",
+      "ingredient": "MILK",
+      "weight": 61.800000000000004
+    },
+    {
+      "text": "chopped walnuts",
+      "amount": "1",
+      "amount_decimal": 1.0,
+      "unit": "CUP",
+      "ingredient": "WALNUT_CHOPPED",
+      "weight": "Density N/A"
+    }
+  ]
+}
